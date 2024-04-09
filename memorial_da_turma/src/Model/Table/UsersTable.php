@@ -74,17 +74,17 @@ class UsersTable extends Table
             ->notEmptyString('password');
 
         $validator
-        ->allowEmptyFile('image')
-        ->add('image',[
-            'mimeType'=>[
-                'rule'=>['mimeType',['image/jpg','image/png','image/jpeg']],
-                'message'=>'Insira somente jpg e png',
-            ],
-            'filesize'=>[
-                'rule'=>['filesize','<=','1MB'],
-                'message'=>'O tamanho da imagem deve ser até 1MB',
-            ],
-            ]);
+            ->allowEmptyFile('image')
+            ->add('image', [
+            'mimeType' => [
+                'rule' => ['mimeType', ['image/jpg', 'image/png', 'image/jpeg']],
+                'message' => 'Insira somente jpg e png.',
+                ],
+            'filesize' => [
+                'rule' => ['filesize', '<=', '1MB'],
+                'message' => 'O tamanho da imagem deve ser até 1MB',
+                ],
+        ]);
 
         return $validator;
     }

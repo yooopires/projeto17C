@@ -6,17 +6,14 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * Viagen Entity
  *
  * @property int $id
- * @property string $username
- * @property string $email
- * @property string $password
- * @property string $imagem
- *
- * @property \App\Model\Entity\MembrosTurma[] $membros_turma
+ * @property string $nome
+ * @property string $descricao
+ * @property string $feedback
  */
-class User extends Entity
+class Viagen extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -28,19 +25,8 @@ class User extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'username' => true,
-        'email' => true,
-        'password' => true,
-        'image' => true,
-        'membros_turma' => true,
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array<string>
-     */
-    protected $_hidden = [
-        'password',
+        'nome' => true,
+        'descricao' => true,
+        'feedback' => true,
     ];
 }

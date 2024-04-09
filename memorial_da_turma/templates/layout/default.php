@@ -1,3 +1,4 @@
+
 <?php
 /**
  * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
@@ -26,60 +27,73 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/footers/footer-6/assets/css/footer-6.css">
+    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.3/components/footers/footer-1/assets/css/footer-1.css">
 </head>
 <style>
-    #IMAGEM{
-        border-radius:100px;
-        width:25px;
-        height:25px;
-        object-fit:cover;
-    }
-    .navbar{
-        height:25px;
-    }
+  #menu{
+    padding-top:20px;
+    padding-bottom:20px;
+  }
+  #a{
+    background-color:black;
+    width:250px;
+  }
 </style>
 <body>
-    <div class="m-4" id="fundo">
-        <nav class="navbar navbar-expand-lg d-flex justify-content-sm-center">
-            <div class="container-fluid">    
-                <div class="collapse navbar-collapse justify-content-sm-center" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link">Home</a>
-                        <a href="#" class="nav-item nav-link">Viagens</a>
-                        <a href="#" class="nav-item nav-link">Projetos</a>
-                        <a href="#" class="nav-item nav-link">Momentos</a>
-                        <a href="#" class="nav-item nav-link">Membros da Turma</a>
-                    </div>
-                </div>
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <img src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle">
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Perfil</a>
-                                <a class="dropdown-item" href="#">Entrar</a>
-                                <a class="dropdown-item" href="#">Registar</a>
-                            </div>
-                        </li>   
-                    </ul>
-            </div>
-        </nav>
-    </div>
-    
-    <main class="main">
-        <div class="">
-            <?= $this->Flash->render() ?>
-            <?= $this->fetch('content') ?>
+<header>
+      <div id="menu" class="row gy-3 gy-md-5 gy-xl-0 align-items-sm-center">
+        <div class="col-xs-12 col-sm-6 col-xl-3 order-0 order-xl-0">
+          <div class="footer-logo-wrapper text-center text-sm-start">
+            <a href="#!">
+            </a>
+          </div>
         </div>
-    </main>
-    <footer>
-    </footer>
-</body>
+
+        <div class="col-xs-12 col-xl-6 order-2 order-xl-1">
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link link-secondary px-2 px-md-3" href="/cakephp/memorial_da_turma/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary px-2 px-md-3" href="/cakephp/memorial_da_turma/users">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary px-2 px-md-3" href="/cakephp/memorial_da_turma/projetos">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary px-2 px-md-3" href="/cakephp/memorial_da_turma/viagens">Viagens</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-secondary px-2 px-md-3" href="/cakephp/memorial_da_turma/users">Login</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+</header>
+    
+<main class="main">
+    <div class="">
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
+    </div>
+</main>
+
+<footer class="footer">
+  <section class="bg-light py-5 py-xl-8 py-xxl-9 border-top border-light">
+    <div class="container overflow-hidden d-flex justify-content-center">
+      <div class="row gy-5 gy-md-0">
+        <div class="col-xs-12 col-md-12 order-6 order-md-6">
+          <div class="copyright text-center text-md-start">
+            &copy; 2024. Todos os Direitos Reservados.
+          </div>
+          <div class="copyright text-center text-md-start">
+            Feito por <a href="https://bootstrapbrain.com/" class="link-secondary text-decoration-none">12ºE Turno 1</a> com <span class="text-primary">&#9829;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
 </html>

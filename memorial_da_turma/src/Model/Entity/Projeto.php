@@ -6,17 +6,15 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * User Entity
+ * Projeto Entity
  *
  * @property int $id
- * @property string $username
- * @property string $email
- * @property string $password
+ * @property string $nome
+ * @property string $descricao
  * @property string $imagem
- *
- * @property \App\Model\Entity\MembrosTurma[] $membros_turma
+ * @property string $feedback
  */
-class User extends Entity
+class Projeto extends Entity
 {
     /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
@@ -28,19 +26,9 @@ class User extends Entity
      * @var array<string, bool>
      */
     protected $_accessible = [
-        'username' => true,
-        'email' => true,
-        'password' => true,
-        'image' => true,
-        'membros_turma' => true,
-    ];
-
-    /**
-     * Fields that are excluded from JSON versions of the entity.
-     *
-     * @var array<string>
-     */
-    protected $_hidden = [
-        'password',
+        'nome' => true,
+        'descricao' => true,
+        'imagem' => true,
+        'feedback' => true,
     ];
 }

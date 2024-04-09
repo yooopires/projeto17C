@@ -28,7 +28,7 @@
                 </tr>
                 <tr>
                     <th><?= __('Imagem') ?></th>
-                    <td><?= h($user->image) ?></td>
+                    <td><?= h($user->imagem) ?></td>
                 </tr>
                 <tr>
                     <th><?= __('Id') ?></th>

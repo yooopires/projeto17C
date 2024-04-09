@@ -5,7 +5,6 @@ namespace App\Controller;
 
 use Cake\Event\EventInterface;
 use App\Controller\AppController;
-
 /**
  * Users Controller
  *
@@ -21,9 +20,11 @@ class UsersController extends AppController
      */
     public function index()
     {
-        $users = $this->paginate($this->Users);
-
-        $this->set(compact('users'));
+        //$users = $this->paginate($this->Users);
+        $this-> Users -> recursive = 0;
+        $this -> paginate=array('limit'=>3);
+        $this  -> set('users', $this-> paginate());
+        //$this->set(compact('users'));
     }
 
     /**
